@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>CTRL - Portfolio</title>
+
+    <!-- LOADER -->
+    <script>
+        var loaded = false;
+
+        window.addEventListener("load", function(event) {
+            loaded = true;
+            return loaded;
+        });
+
+        function onReady(callback) {
+            var intervalId = window.setInterval(function() {
+                if (loaded === true) {
+                    window.clearInterval(intervalId);
+                    callback.call(this);
+                }
+            }, 500);
+        }
+
+        function setVisible(selector, visible) {
+            //document.querySelector(selector).style.display = visible ? 'block' : 'none';
+            if (visible === false) {
+                $(document).ready(function() {
+                    $(selector).fadeOut(1000);
+                });
+            } else {
+                $(document).ready(function() {
+                    $(selector).fadeIn(1000);
+
+                    $('.hidden-block').css('opacity', '0');
+                });
+            }
+        }
+
+        onReady(function() {
+            setVisible('#site', true);
+            setVisible('#loader', false);
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="loader">
+        <img src="img/loader.gif" alt="loader">
+    </div>
+
+    <div id="burger-menu">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- MENU -->
+
+    <nav>
+        <div>
+            <ul>
+                <a class="links" href="#header">
+                    <li>Accueil</li>
+                </a>
+                <a class="links" target="_blank" href="demo_1/index.html">
+                    <li>Site Démo</li>
+                </a>
+                <a class="links" target="_blank" href="http://projet-php.christophe-trebaol.fr/1-la-photographie-les-photographes">
+                    <li>Projet PHP</li>
+                </a>
+                <a class="links" target="_blank" href="https://portfolio.christophe-trebaol.fr/">
+                    <li>API &amp IONIC APP</li>
+                </a>
+                <a class="links" target="_blank" href="https://christreb.github.io/Chatbot-deust/">
+                    <li>Chatbot</li>
+                </a>
+                <a class="links" target="_blank" href="https://github.com/ChrisTreb">
+                    <li>Page Github</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="black-cover">
+    </div>
+
+    <div id="site">
+
+        <!-- HEADER -->
+
+        <section id="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="social-block">
+                            <div class="social-menu">
+                                <a class="links" href="#"><span><i class="fab fa-linkedin "></i></span></a>
+                                <a class="links" href="#"><span><i class="fab fa-github-square "></i></span></a>
+                                <a class="links" href="#"><span><i class="fab fa-facebook-square "></i></span></a>
+                                <a class="links" href="#"><span><i class="fab fa-instagram-square "></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="img-div">
+                            <div class="img-dev">
+                                <img src="img/web-dev.png" alt="webdev">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-5">
+                    </div>
+                </div>
+                <div class="title">
+                    <h1>CTRL</h1>
+                    <h2>Développeur</h2>
+                    <button class="btn btn-projects" onclick="goToProjects()">Mes projets</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRESENTATION -->
+
+        <section id="presentation">
+            <div class="container-fluid">
+                <div class="row presentation-row">
+                    <div class="col-md-12">
+                        <div class="presentation-block">
+                            <div>
+                                <h2 class="hidden-block">Qui suis-je ?</h2>
+                                <p>
+                                    Développeur Front &amp Backend, touche à tout et curieux.
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque nunc in nisl pretium convallis.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="colored-col colored-col-y">
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                            </div>
+                            <div class="col-md-7">
+                            </div>
+                            <div class="col-md-2 p-col-x">
+                                <div class="colored-col colored-col-x">
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJET 1  -->
+
+        <section>
+            <div class="container-fluid">
+                <div id="cards" class="row">
+                    <div class="col-md-12">
+                        <div class="project">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="img-project img-project-1">
+                                        <div>
+                                            <img class="img-fluid img-project-small" src="img/projet-php.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row prjt-row project-row-1">
+                                        <div class="project-text">
+                                            <div>
+                                                <h3>Projet de formation - PHP</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacus ipsum, accumsan quis dolor in, tempor elementum erat. Curabitur sodales, turpis eu blandit consequat, libero eros cursus urna, eleifend auctor magna enim quis felis. Ut pharetra
+                                                    in eros a vestibulum. Curabitur commodo finibus viverra.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row project-row-2">
+                                        <div class="project-button ripple">
+                                            <a href="#">
+                                                <p><i class="fab fa-angellist"></i> Voir le projet</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                            </div>
+                            <div class="col-md-9">
+                            </div>
+                            <div class="col-md-1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                            </div>
+                            <div class="col-md-7">
+                            </div>
+                            <div class="col-md-2 p-col-x">
+                            </div>
+                            <div class="col-md-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJET 2 -->
+
+        <section>
+            <div class="container-fluid">
+                <div id="cards-1" class="row">
+                    <div class="col-md-12">
+                        <div class="project">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="img-project img-project-2">
+                                        <div>
+                                            <img class="img-fluid img-project-small" src="img/site-demo.png">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row prjt-row project-row-1">
+                                        <div class="project-text">
+                                            <div>
+                                                <h3>Site Démo</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacus ipsum, accumsan quis dolor in, tempor elementum erat. Curabitur sodales, turpis eu blandit consequat, libero eros cursus urna, eleifend auctor magna enim quis felis. Ut pharetra
+                                                    in eros a vestibulum. Curabitur commodo finibus viverra.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row project-row-2">
+                                        <div class="project-button ripple">
+                                            <a href="#">
+                                                <p><i class="fab fa-angellist"></i> Voir le projet</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                            </div>
+                            <div class="col-md-9">
+                            </div>
+                            <div class="col-md-1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                            </div>
+                            <div class="col-md-7">
+                            </div>
+                            <div class="col-md-2 p-col-x">
+                            </div>
+                            <div class="col-md-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJET 3 -->
+
+        <section>
+            <div class="container-fluid">
+                <div id="cards-1" class="row">
+                    <div class="col-md-12">
+                        <div class="project">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="img-project img-project-3">
+                                        <div>
+                                            <img class="img-fluid img-project-small" src="img/api.jpg">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row prjt-row project-row-1">
+                                        <div class="project-text">
+                                            <div>
+                                                <h3>Ionic App &amp PHP Api</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacus ipsum, accumsan quis dolor in, tempor elementum erat. Curabitur sodales, turpis eu blandit consequat, libero eros cursus urna, eleifend auctor magna enim quis felis. Ut pharetra
+                                                    in eros a vestibulum. Curabitur commodo finibus viverra.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row project-row-2">
+                                        <div class="project-button ripple">
+                                            <a href="#">
+                                                <p><i class="fab fa-angellist"></i> Voir le projet</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                            </div>
+                            <div class="col-md-9">
+                            </div>
+                            <div class="col-md-1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                            </div>
+                            <div class="col-md-7">
+                            </div>
+                            <div class="col-md-2 p-col-x">
+                            </div>
+                            <div class="col-md-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJET 4 -->
+
+        <section>
+            <div class="container-fluid">
+                <div id="cards-1" class="row">
+                    <div class="col-md-12">
+                        <div class="project">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="img-project img-project-4">
+                                        <div>
+                                            <img class="img-fluid img-project-small" src="https://images.pexels.com/photos/774731/pexels-photo-774731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row prjt-row project-row-1">
+                                        <div class="project-text">
+                                            <div>
+                                                <h3>Arlette Chatbot</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacus ipsum, accumsan quis dolor in, tempor elementum erat. Curabitur sodales, turpis eu blandit consequat, libero eros cursus urna, eleifend auctor magna enim quis felis. Ut pharetra
+                                                    in eros a vestibulum. Curabitur commodo finibus viverra.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row project-row-2">
+                                        <div class="project-button ripple">
+                                            <a href="#">
+                                                <p><i class="fab fa-angellist"></i> Voir le projet</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                            </div>
+                            <div class="col-md-9">
+                            </div>
+                            <div class="col-md-1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                            </div>
+                            <div class="col-md-7">
+                            </div>
+                            <div class="col-md-2 p-col-x">
+                            </div>
+                            <div class="col-md-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULAIRE DE CONTACT -->
+
+        <section>
+            <div class="container-fluid">
+                <div id="form" class="row">
+                    <div class="col-md-12">
+                        <div class="form">
+                            <h2 class="hidden-block">Contactez moi</h2>
+                            <div id="form-container">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Adresse e-mail</label>
+                                        <input type="email" class="form-control" id="email" required="required">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message-object" class="form-label">Objet</label>
+                                        <input type="text" class="form-control" id="message-object" required="required">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message-content" class="form-label">Message</label>
+                                        <textarea type="text" class="form-control" id="message-content" rows="10" required="required"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn submit-btn">Envoyer</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer>
+            <div class="copyright">
+                <p>Christophe Trébaol - 2020</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper.js and Bootstrap JS
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scrollme.js"></script>
+    <script>
+        // Bouton de navigation vers les projets
+        function goToProjects() {
+            window.location.href = "#cards";
+        }
+    </script>
+</body>
+
+</html>
